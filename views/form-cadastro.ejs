@@ -1,0 +1,44 @@
+
+<%- include('partials/head') %>
+
+<body>
+
+    
+    <%- include('partials/navbar') %>
+
+    <main>
+
+        <form action="==metodo post router== " method="POST">
+
+                <div class="">
+                  <label for="name">Nome</label>
+                  <input name="name" class="" placeholder="Seu nome" minlength="6">
+                  <small class="">Coloque seu nome!</small>
+                </div>
+
+                <div class="">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="" placeholder="Seu Email" minlength="6">
+                    <small class="">Coloque seu Email!</small>
+                </div>
+
+                <div class="">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" class="" placeholder="Sua Senha" minlength="6">
+                    <small class="">Coloque sua Senha!</small>
+                </div>
+
+                <div class="">
+                    <label for="datanasc">Data de Nascimento</label>
+                    <input type="password" name="senha" class="" placeholder="Sua Senha" minlength="6">
+                    <small class="">Coloque sua Senha!</small>
+                </div>
+
+                <button class="">Cadastrar</button>
+                
+              </form>
+
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

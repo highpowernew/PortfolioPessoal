@@ -1,0 +1,41 @@
+
+<%- include('partials/head') %>
+
+
+<body>
+' <%- include('partials/navbar') %>'
+    <main>
+        <% if (!logado) { %> 
+
+            <% if (locals.erro) { %>
+                <h2><%= erro %></h2>
+            <% } %>
+
+        <form method="POST">
+                <div class="form-group">
+                  <label>Endereço de email</label>
+                  <input type="email" name="email"  class="" aria-describedby="emailHelp" placeholder="Seu email" minlength="6">
+                  <small id="emailHelp" class="">Nunca vamos compartilhar seu email, com ninguém.</small>
+                </div>
+                <div class="form-group">
+                  <label>Senha</label>
+                  <input type="password" name="senha" class="" placeholder="Senha" minlength="6">
+                </div>
+                <button type="submit" value="entrar" class="btn btn-primary">Logar</button>
+
+              </form>
+              <a href="/new-user">Não tenho cadastro</a>
+
+              <% } else { %>
+                <div >
+                    <h1><%= user.nome %>, deseja trocar o nome, senha ou sair?</h1>
+                    <a href="/trocarnome">TROCAR NOME</a>
+                    <a href="/trocarsenha">TROCAR SENHA</a>
+                    <a href="/deslogar">SAIR</a>
+                </div>
+            <% } %>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+
+</html>
